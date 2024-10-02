@@ -9,7 +9,7 @@ public class SwiftFlutterShareMePlugin: NSObject, FlutterPlugin, SharingDelegate
     let _methodWhatsAppPersonal = "whatsapp_personal";
     let _methodWhatsAppBusiness = "whatsapp_business_share";
     let _methodFaceBook = "facebook_share";
-    let _methodTwitter = "twitter_share";
+    // let _methodTwitter = "twitter_share";
     let _methodInstagram = "instagram_share";
     let _methodSystemShare = "system_share";
     let _methodTelegramShare = "telegram_share";
@@ -62,10 +62,11 @@ public class SwiftFlutterShareMePlugin: NSObject, FlutterPlugin, SharingDelegate
             let args = call.arguments as? Dictionary<String,Any>
             sharefacebook(message: args!, result: result)
             
-        }else if(call.method.elementsEqual(_methodTwitter)){
-            let args = call.arguments as? Dictionary<String,Any>
-            shareTwitter(message: args!["msg"] as! String, url: args!["url"] as! String, result: result)
         }
+        // else if(call.method.elementsEqual(_methodTwitter)){
+        //     let args = call.arguments as? Dictionary<String,Any>
+        //     shareTwitter(message: args!["msg"] as! String, url: args!["url"] as! String, result: result)
+        // }
         else if(call.method.elementsEqual(_methodInstagram)){
             let args = call.arguments as? Dictionary<String,Any>
             shareInstagram(args: args!)

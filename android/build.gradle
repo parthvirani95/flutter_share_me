@@ -5,6 +5,7 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+//        jcenter()
     }
 
     dependencies {
@@ -16,6 +17,7 @@ rootProject.allprojects {
     repositories {
         google()
         mavenCentral()
+//        jcenter()
     }
 }
 
@@ -41,4 +43,7 @@ android {
 
 dependencies {
     implementation 'com.facebook.android:facebook-share:17.0.0'
+//    implementation('com.twitter.sdk.android:twitter:3.3.0@aar') {
+//        transitive = true
+//    }
 }
